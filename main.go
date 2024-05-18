@@ -65,10 +65,12 @@ func main() {
 	}
 }
 
-func printUsage() {
+func printUsage() error {
 	fmt.Println("Usage: mockdata [-i | --input] <input file> [-o | --output] <output file>")
 	fmt.Println("-i --input: File input berupa JSON sebagai template")
 	fmt.Println("-o --output: File output berupa JSON sebagai hasil")
+
+	return nil
 }
 
 func validateInput(path string) error {
